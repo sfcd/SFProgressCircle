@@ -29,7 +29,7 @@ static void * ProgressContext = &ProgressContext;
     [_progressView setCenter:self.view.center];
     [_progressView setLineWidth:6];
     [_progressView setStartColor:[UIColor whiteColor]];
-    [_progressView setEndColor:[[UIColor whiteColor] colorWithAlphaComponent:.1]];
+    [_progressView setEndColor:[[UIColor whiteColor] colorWithAlphaComponent:.0]];
     [_progressView setProgress:0];
     [_progressView setEndAngle:M_PI];
     [self.view addSubview:_progressView];
