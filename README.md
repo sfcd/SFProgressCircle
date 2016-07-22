@@ -2,6 +2,8 @@
 
 A circular gradient progress view implementation for iOS with efficient drawing using a series of arcs with linear gradient.
 
+<img src="https://raw.githubusercontent.com/sfcd/SFProgressCircle/master/Example/Resources/scr.png" alt="Example Usage" width="320" height="569" />
+
 ## Requirements
 
 - iOS 8.0+
@@ -29,7 +31,7 @@ To integrate SFProgressCircle into your Xcode project using CocoaPods, specify i
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
