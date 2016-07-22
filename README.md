@@ -46,4 +46,4 @@ $ pod install
 ```
 
 ##License
-SFCircleGradientProgress is available under the MIT license. See the LICENSE file for more info.
+SFProgressCircle is available under the MIT license. See the LICENSE file for more info.
