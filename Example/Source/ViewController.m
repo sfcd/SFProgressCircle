@@ -9,26 +9,25 @@
 #import "ViewController.h"
 #import <SFProgressCircle/SFProgressCircle.h>
 
-static void * ProgressContext = &ProgressContext;
+#define AnimationDuration 0.6
 
 #define BlueColor [UIColor colorWithRed:0.f green:185.f/255.f blue:242.f/255.f alpha:1]
 #define PurpleColor [UIColor colorWithRed:151.f/255.f green:88.f/255.f blue:254.f/255.f alpha:1]
 #define YellowColor [UIColor colorWithRed:1.f green:234.f/255.f blue:57.f/255.f alpha:1]
 #define GreenColor [UIColor colorWithRed:32.f/255.f green:218.f/255.f blue:145.f/255.f alpha:1]
-#define AnimationDuration 0.6
 
 @interface ViewController ()
 {
     NSArray *themes;
     NSInteger cursor;
+    
+    CFTimeInterval startTime;
+    NSNumber *fromNumber;
+    NSNumber *toNumber;
 }
 @property (nonatomic) SFCircleGradientView *progressView;
 @property (nonatomic) UILabel *titleLabel;
 @property (nonatomic) UIButton *refreshButton;
-
-@property (nonatomic) CFTimeInterval startTime;
-@property (nonatomic) NSNumber *fromNumber;
-@property (nonatomic) NSNumber *toNumber;
 
 @end
 
@@ -112,24 +111,24 @@ static void * ProgressContext = &ProgressContext;
 
 - (void)animateTitle:(NSNumber *)from toNumber:(NSNumber *)to
 {
-    _fromNumber = from;
-    _toNumber = to;
-    _titleLabel.text = [_fromNumber stringValue];
+    fromNumber = from;
+    toNumber = to;
+    _titleLabel.text = [fromNumber stringValue];
     
     CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(animateNumber:)];
-    _startTime = CACurrentMediaTime();
+    startTime = CACurrentMediaTime();
     [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void)animateNumber:(CADisplayLink *)link
 {
-    float dt = ([link timestamp] - _startTime) / AnimationDuration;
+    float dt = ([link timestamp] - startTime) / AnimationDuration;
     if (dt >= 1.0) {
-        _titleLabel.text = [_toNumber stringValue];
+        _titleLabel.text = [toNumber stringValue];
         [link removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         return;
     }
-    float current = ([_toNumber floatValue] - [_fromNumber floatValue]) * dt + [_fromNumber floatValue];
+    float current = ([toNumber floatValue] - [fromNumber floatValue]) * dt + [fromNumber floatValue];
     _titleLabel.text = [NSString stringWithFormat:@"%li", (long)current];
 }
 
