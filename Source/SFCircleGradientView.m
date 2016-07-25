@@ -129,10 +129,7 @@
 - (void)setProgress:(CGFloat)progress animateWithDuration:(NSTimeInterval)duration
 {
     float currentValue = self.progress;
-    
-    [self willChangeValueForKey:@"progress"];
     self.progress = progress;
-    [self didChangeValueForKey:@"progress"];
     self.progressLayer.progress = progress;
     
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"progress"];
@@ -142,7 +139,7 @@
     anim.repeatCount = 0;
     anim.autoreverses = NO;
     anim.removedOnCompletion = YES;
-    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     [self.progressLayer addAnimation:anim forKey:@"progress"];
 }
 
