@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SFProgressCircle"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A circular gradient progress view implementation for iOS (supports partial circle)"
   s.description  = <<-DESC
                    A circular gradient progress view implementation for iOS (supports partial circle)
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    * Possibility to set lineWidth.
                    * Possibility to set progress with or without animation.
                    DESC
-  s.homepage     = "http://sfcd.com"
+  s.homepage     = "https://github.com/sfcd/SFProgressCircle.git"
   s.screenshots  = "https://raw.githubusercontent.com/sfcd/SFProgressCircle/master/Example/Resources/scr.png"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "SFÇD" => "developers@softfacade.com" }
