@@ -1,1 +1,4 @@
 language: objective-c
+osx_image: xcode7.3
+xcode_workspace: SFProgressCircle.xcworkspace
+xcode_scheme: SFProgressCircle

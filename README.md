@@ -1,8 +1,9 @@
 # SFProgressCircle
 
 [![Build Status](https://travis-ci.org/sfcd/SFProgressCircle.svg?branch=master)](https://travis-ci.org/sfcd/SFProgressCircle)
-![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)
-[![Twitter](https://img.shields.io/badge/twitter-SFCD-orange.svg)](https://twitter.com/sfcdteam)
+[![CocoaPods](https://img.shields.io/cocoapods/v/SFProgressCircle.svg)](https://img.shields.io/cocoapods/v/SFProgressCircle.svg?style=flat)
+[![Platform](https://img.shields.io/cocoapods/p/SFProgressCircle.svg)](http://cocoadocs.org/docsets/SFProgressCircle?style=flat)
+[![Twitter](https://img.shields.io/badge/twitter-SFCD-orange.svg)](https://twitter.com/sfcdteam?style=flat)
 
 A circular gradient progress view implementation for iOS with efficient drawing using a series of arcs with linear gradient.
 
