@@ -99,11 +99,11 @@
 - (void)drawInContext:(CGContextRef)ctx
 {
     [super drawInContext:ctx];
-    [self drawWithSegmentNumber:_numSegments - 1 contex:ctx];
-    [self drawWithSegmentNumber:_numSegments contex:ctx];
+    [self drawWithSegmentNumber:_numSegments - 1 context:ctx];
+    [self drawWithSegmentNumber:_numSegments context:ctx];
 }
 
-- (void)drawWithSegmentNumber:(int)segmentCount contex:(CGContextRef)ctx
+- (void)drawWithSegmentNumber:(int)segmentCount context:(CGContextRef)ctx
 {
     CGRect bounds = self.bounds;
     CGPoint centerPoint = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds));
@@ -128,7 +128,7 @@
         float fromAngleCur = self.startAngle + f_cur * (endAngle - self.startAngle);
         float toAngleCur = self.startAngle + f * (endAngle - self.startAngle);
         [self drawSegmentAtCenter:centerPoint from:fromAngleCur to:toAngleCur radius:_circleRadius width:_circleWidth
-                       startColor:fromColor endColor:toColor contex:ctx];
+                       startColor:fromColor endColor:toColor context:ctx];
         
         fromColor = toColor;
     }
@@ -141,7 +141,7 @@
                       width:(CGFloat)width
                  startColor:(UIColor *)startColor
                    endColor:(UIColor*)endColor
-                     contex:(CGContextRef)ctx
+                    context:(CGContextRef)ctx
 {
     CGContextSaveGState(ctx);
     CGContextSetLineWidth(ctx, width);
