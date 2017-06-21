@@ -7,8 +7,7 @@
 
 A circular gradient progress view implementation for iOS with efficient drawing using a series of arcs with linear gradient.
 
-<img src="https://raw.githubusercontent.com/sfcd/SFProgressCircle/master/Example/Resources/scr.png" alt="Example Usage" width="343" height="369" />
-<img src="https://raw.githubusercontent.com/sfcd/SFProgressCircle/master/Example/Resources/example.gif" alt="Example Usage" width="320" height="369" />
+<img src="https://raw.githubusercontent.com/sfcd/SFProgressCircle/master/Example/Resources/scr.png" alt="Example Usage" width="343" height="369" /> <img src="https://raw.githubusercontent.com/sfcd/SFProgressCircle/master/Example/Resources/example.gif" alt="Example Usage" width="320" height="369" />
 
 ## Features
 
