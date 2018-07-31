@@ -105,10 +105,12 @@
 
 - (void)drawWithSegmentNumber:(int)segmentCount context:(CGContextRef)ctx
 {
-    CGFloat endAngle = self.startAngle + (self.endAngle - self.startAngle) * self.progress;
-    if (_circleRadius * endAngle < 0.001) {
+    CGFloat durationAngle = (self.endAngle - self.startAngle) * self.progress;
+    if (_circleRadius * durationAngle < 0.001) {
         return;
     }
+    
+    CGFloat endAngle = self.startAngle + durationAngle;
     CGRect bounds = self.bounds;
     CGPoint centerPoint = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds));
     

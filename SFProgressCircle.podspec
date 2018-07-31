@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SFProgressCircle"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "A circular gradient progress view implementation for iOS (supports partial circle)"
   s.description  = <<-DESC
                    A circular gradient progress view implementation for iOS (supports partial circle)
