@@ -105,6 +105,10 @@
 
 - (void)drawWithSegmentNumber:(int)segmentCount context:(CGContextRef)ctx
 {
+    CGFloat endAngle = self.startAngle + (self.endAngle - self.startAngle) * self.progress;
+    if (_circleRadius * endAngle < 0.001) {
+        return;
+    }
     CGRect bounds = self.bounds;
     CGPoint centerPoint = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds));
     
@@ -114,19 +118,18 @@
     [_endColor getRed:&c2[0] green:&c2[1] blue:&c2[2] alpha:&c2[3]];
     
     UIColor *fromColor = self.startColor;
-    float endAngle = self.startAngle + (self.endAngle - self.startAngle) * self.progress;
     for(int i = 0; i < segmentCount; ++i)
     {
-        float f_cur = (float)(i) / segmentCount;
-        float f = (float)(i + 1) / segmentCount;
+        CGFloat f_cur = (CGFloat)(i) / segmentCount;
+        CGFloat f = (CGFloat)(i + 1) / segmentCount;
         
         UIColor *toColor = [UIColor colorWithRed:f * c2[0] + (1 - f) * c1[0]
                                            green:f * c2[1] + (1 - f) * c1[1]
                                             blue:f * c2[2] + (1 - f) * c1[2]
                                            alpha:f * c2[3] + (1 - f) * c1[3]];
         
-        float fromAngleCur = self.startAngle + f_cur * (endAngle - self.startAngle);
-        float toAngleCur = self.startAngle + f * (endAngle - self.startAngle);
+        CGFloat fromAngleCur = self.startAngle + f_cur * (endAngle - self.startAngle);
+        CGFloat toAngleCur = self.startAngle + f * (endAngle - self.startAngle);
         [self drawSegmentAtCenter:centerPoint from:fromAngleCur to:toAngleCur radius:_circleRadius width:_circleWidth
                        startColor:fromColor endColor:toColor context:ctx];
         
