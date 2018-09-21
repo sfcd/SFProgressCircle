@@ -24,6 +24,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 IB_DESIGNABLE
 @interface SFCircleGradientView : UIView

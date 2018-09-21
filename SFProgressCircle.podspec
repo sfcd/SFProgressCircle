@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SFProgressCircle"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "A circular gradient progress view implementation for iOS (supports partial circle)"
   s.description  = <<-DESC
                    A circular gradient progress view implementation for iOS (supports partial circle)
@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/sfcd/SFProgressCircle.git", :tag => s.version }
   s.platform     = :ios, '8.0'
   s.requires_arc = true
-  s.source_files = 'Source/*'
-  s.framework    = 'UIKit', 'QuartzCore'
+  s.frameworks   = 'UIKit', 'QuartzCore', 'CoreGraphics'
+  s.source_files = 'Source/*.{h,m}'
 end

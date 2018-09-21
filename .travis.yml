@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode10.0
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
@@ -7,8 +7,8 @@ env:
   - WORKSPACE=SFProgressCircle.xcworkspace
   - FRAMEWORK_SCHEME="SFProgressCircle"
   - EXAMPLE_SCHEME="Example"
-  - IOS_SDK=iphonesimulator9.3
-  - DESTINATION="name=iPhone 6S,OS=9.3"
+  - IOS_SDK=iphonesimulator12.0
+  - DESTINATION="name=iPhone XS,OS=12.0"
 script:
   - xcodebuild -version
   - xcodebuild -showsdks
