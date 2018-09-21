@@ -1,6 +1,6 @@
 *.DS_Store*
 *xcuserdata*
-*.xcuserstate
+*xcshareddata*
 /Pods
-Podfile.lock
-.build/
+*.idea*
+*.vscode*
