@@ -65,7 +65,6 @@
     _gradientLayer = [self progressLayer];
     _gradientLayer.startColor = [UIColor blackColor];
     _gradientLayer.endColor = [UIColor greenColor];
-    _gradientLayer.roundedCorners = YES;
     
     [self updateLayerData:frame];
     
