@@ -16,11 +16,11 @@ A circular gradient progress view implementation for iOS with efficient drawing 
 - [x] Possibility to set both ``startAngle`` and ``endAngle``.
 - [x] Possibility to set ``lineWidth``.
 - [x] Possibility to set ``progress`` with or without animation.
+- [x] Rounded edges for progress line.
 
 ## TODO
 
 - [ ] Looped circular gradient.
-- [ ] Rounded edges for progress line.
 - [ ] Multiple colors for gradient.
 
 ## Requirements

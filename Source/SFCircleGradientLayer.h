@@ -36,5 +36,6 @@
 @property (nonatomic) int numSegments;
 @property (nonatomic) CGFloat circleRadius;
 @property (nonatomic) CGFloat circleWidth;
+@property (nonatomic) BOOL roundedCorners;
 
 @end

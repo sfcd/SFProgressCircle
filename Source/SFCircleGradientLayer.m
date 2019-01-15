@@ -48,6 +48,7 @@
         self.numSegments = layer.numSegments;
         self.circleRadius = layer.circleRadius;
         self.circleWidth = layer.circleWidth;
+        self.roundedCorners = layer.roundedCorners;
     }
     return self;
 }
@@ -150,6 +151,8 @@
 {
     CGContextSaveGState(ctx);
     CGContextSetLineWidth(ctx, width);
+    CGLineCap lineCap = self.roundedCorners ? kCGLineCapRound : kCGLineCapButt;
+    CGContextSetLineCap(ctx, lineCap);
     
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path addArcWithCenter:center radius:radius - width * 0.5f startAngle:startAngle endAngle:endAngle clockwise:YES];

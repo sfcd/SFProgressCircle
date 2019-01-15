@@ -36,6 +36,7 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable UIColor *endColor;
 @property (nonatomic) IBInspectable CGFloat startAngle;
 @property (nonatomic) IBInspectable CGFloat endAngle;
+@property (nonatomic) IBInspectable BOOL roundedCorners;
 
 - (void)setProgress:(CGFloat)progress animateWithDuration:(NSTimeInterval)duration;
 - (void)abortAnimation;

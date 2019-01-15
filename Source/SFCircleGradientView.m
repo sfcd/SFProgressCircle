@@ -65,6 +65,7 @@
     _gradientLayer = [self progressLayer];
     _gradientLayer.startColor = [UIColor blackColor];
     _gradientLayer.endColor = [UIColor greenColor];
+    _gradientLayer.roundedCorners = YES;
     
     [self updateLayerData:frame];
     
@@ -106,6 +107,12 @@
 {
     _endAngle = endAngle;
     _gradientLayer.endAngle = endAngle;
+}
+
+- (void)setRoundedCorners:(BOOL)roundedCorners
+{
+    _roundedCorners = roundedCorners;
+    _gradientLayer.roundedCorners = roundedCorners;
 }
 
 - (void)updateLayerData:(CGRect)frame
